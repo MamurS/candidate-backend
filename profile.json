@@ -1,0 +1,58 @@
+{
+  "full_name": "AKMALJON SODIKOV",
+  "email": "akmal.sodikov04@gmail.com",
+  "phone": null,
+  "country": null,
+  "city": "Tashkent",
+  "summary": "Motivated full-stack developer and a student at Inha University, with a strong foundation in modern web technologies and a passion for building scalable, user-friendly applications. Proficient in front-end technologies such as JavaScript (ES6+), TypeScript, React, Redux Toolkit, Axios, i18n, and UI libraries including Material UI (MUI), Shadcn UI, Chakra UI, Framework7, Konst UI, and Tailwind. Experienced with back-end technologies like Node.js, Express, and Django (Python), and databases (MySQL). Skilled in programming languages including JavaScript/TypeScript, and Python, and familiar with tools and frameworks like Git, Bash, REST APIs, and WebSockets. Well-versed in analytical problem-solving and dedicated to delivering high-quality software solutions.",
+  "languages": [
+    "English",
+    "Russian"
+  ],
+  "skills": [
+    "Fullstack Development",
+    "React",
+    "Nextjs",
+    "Django",
+    "JavaScript",
+    "TypeScript",
+    "Node.js",
+    "Express",
+    "MySQL",
+    "Git",
+    "Bash",
+    "REST APIs",
+    "WebSockets",
+    "UI/UX Design"
+  ],
+  "experience": [
+    {
+      "company": "SellUz",
+      "position": "Junior React.js Developer",
+      "employer_location": "Tashkent",
+      "remote": false,
+      "start_date": "2023-01-01",
+      "end_date": null,
+      "description": "Built a user-friendly interface connecting car sellers and buyers using modern front-end technologies. Implemented messaging features to allow seamless communication between users through Telegram, increasing user engagement by 55%. Designed intuitive UI/UX and employed responsive design principles to optimize the application across various devices, improving user satisfaction ratings by 34%."
+    },
+    {
+      "company": "ITHub Uzbekistan",
+      "position": "React.js Developer (Volunteer)",
+      "employer_location": "Tashkent",
+      "remote": false,
+      "start_date": "2023-09-01",
+      "end_date": null,
+      "description": "Developing a web application to facilitate user matching at events, ensuring that participants could easily find and connect with like-minded attendees. Designed with React and integrated with Django. Organising events and help to beginners to start their education path in JS."
+    }
+  ],
+  "education": [
+    {
+      "institution": "Inha University",
+      "degree": "Bachelors",
+      "field_of_study": "Computer and Information Engineering",
+      "graduation_date": "2026-06-01"
+    }
+  ],
+  "certifications": [],
+  "linkedin_url": null
+}

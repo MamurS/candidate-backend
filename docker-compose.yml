@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  db:
+    image: postgres:15
+    restart: always
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: n3wlyb
+      POSTGRES_PASSWORD: allocedData231
+      POSTGRES_DB: candidatai
+
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgresql://n3wlyb:allocedData231@db:5432/candidatai
+
+volumes:
+  postgres_data:
