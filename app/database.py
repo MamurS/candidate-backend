@@ -6,6 +6,17 @@ from sqlalchemy.orm import sessionmaker
 # Get database URL from environment - prioritize DATABASE_URL from Render
 DATABASE_URL = os.getenv("DATABASE_URL")
 
+# Debug: Print all environment variables that contain 'DATABASE'
+import sys
+print("🔍 DEBUG: Environment variables containing 'DATABASE':")
+for key, value in os.environ.items():
+    if 'DATABASE' in key:
+        # Mask sensitive parts of the URL
+        masked_value = value.split('@')[0] + '@***' if '@' in value else value
+        print(f"  {key} = {masked_value}")
+
+print(f"🔍 DEBUG: Directly checking DATABASE_URL: {DATABASE_URL}")
+
 if not DATABASE_URL:
     # Fallback for local development
     DATABASE_URL = "postgresql://localhost:5432/candidatai"

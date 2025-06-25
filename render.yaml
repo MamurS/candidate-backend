@@ -1,9 +1,15 @@
+databases:
+  - name: candidatai-db
+    databaseName: candidatai
+    user: candidatai_user
+    plan: free
+
 services:
   - type: web
     name: candidatai-backend
     runtime: python
     buildCommand: "./build.sh"
-    startCommand: "uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+    startCommand: "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-10000}"
     plan: free
     healthCheckPath: "/health"
     envVars:
@@ -11,10 +17,4 @@ services:
         fromDatabase:
           name: candidatai-db
           property: connectionString
-    autoDeploy: false
-
-databases:
-  - name: candidatai-db
-    databaseName: candidatai
-    user: candidatai_user
-    plan: free 
+    autoDeploy: false 
