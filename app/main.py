@@ -6,15 +6,23 @@ from fastapi.middleware.cors import CORSMiddleware
 from .database import engine, Base
 from .routers import auth_router, cv_router, work_preferences, job_matches
 
-# Create database tables
-Base.metadata.create_all(bind=engine)
-
 # Create FastAPI app
 app = FastAPI(
     title="FastAPI Auth System",
     description="Authentication system with email OTP verification",
     version="1.0.0"
 )
+
+# Database initialization function (called on startup)
+@app.on_event("startup")
+async def startup_event():
+    try:
+        # Create database tables on startup (not import)
+        Base.metadata.create_all(bind=engine)
+        print("✅ Database tables created successfully")
+    except Exception as e:
+        print(f"❌ Database initialization failed: {e}")
+        # Don't fail startup, let health check handle it
 
 # Add CORS middleware
 origins = [
