@@ -28,7 +28,10 @@ async def startup_event():
 origins = [
     "http://localhost:3000",  # React default
     "http://localhost:8000",  # FastAPI default
+    "http://localhost:8000/", # FastAPI default with trailing slash
     "http://localhost:5173",  # Vite default
+    "http://127.0.0.1:8000",  # FastAPI default (alternative localhost)
+    "http://127.0.0.1:8000/", # FastAPI default with trailing slash
 ]
 
 # Add production origins from environment variable if available
