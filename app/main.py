@@ -32,6 +32,7 @@ origins = [
     "http://localhost:5173",  # Vite default
     "http://127.0.0.1:8000",  # FastAPI default (alternative localhost)
     "http://127.0.0.1:8000/", # FastAPI default with trailing slash
+    "https://candidateai-frontend.onrender.com",  # Production frontend
 ]
 
 # Add production origins from environment variable if available
